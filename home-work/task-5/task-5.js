@@ -12,7 +12,9 @@ const getAllPropValues = function(arr, prop) {
   let item;
   for (const props of arr) {
     item = props[prop];
-    allPropValues.push(item);
+    if (item !== undefined) {
+      allPropValues.push(item);
+    }
   }
   return allPropValues;
 };
